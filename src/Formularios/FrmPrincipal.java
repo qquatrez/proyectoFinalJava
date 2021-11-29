@@ -15,7 +15,7 @@ public class FrmPrincipal extends javax.swing.JFrame {
         menuBar = new javax.swing.JMenuBar();
         frmAdministracion = new javax.swing.JMenu();
         opcionAbogados = new javax.swing.JMenuItem();
-        saveMenuItem = new javax.swing.JMenuItem();
+        opcionClientes = new javax.swing.JMenuItem();
         saveAsMenuItem = new javax.swing.JMenuItem();
         exitMenuItem = new javax.swing.JMenuItem();
         editMenu = new javax.swing.JMenu();
@@ -41,9 +41,14 @@ public class FrmPrincipal extends javax.swing.JFrame {
         });
         frmAdministracion.add(opcionAbogados);
 
-        saveMenuItem.setMnemonic('s');
-        saveMenuItem.setText("Clientes");
-        frmAdministracion.add(saveMenuItem);
+        opcionClientes.setMnemonic('s');
+        opcionClientes.setText("Clientes");
+        opcionClientes.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                opcionClientesActionPerformed(evt);
+            }
+        });
+        frmAdministracion.add(opcionClientes);
 
         saveAsMenuItem.setMnemonic('a');
         saveAsMenuItem.setText("Asuntos");
@@ -121,6 +126,12 @@ public class FrmPrincipal extends javax.swing.JFrame {
         z.show();
     }//GEN-LAST:event_opcionAbogadosActionPerformed
 
+    private void opcionClientesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_opcionClientesActionPerformed
+        FrmClientes z = new FrmClientes();
+        escritorio.add(z);
+        z.show();
+    }//GEN-LAST:event_opcionClientesActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JMenuItem aboutMenuItem;
@@ -135,9 +146,9 @@ public class FrmPrincipal extends javax.swing.JFrame {
     private javax.swing.JMenu helpMenu;
     private javax.swing.JMenuBar menuBar;
     private javax.swing.JMenuItem opcionAbogados;
+    private javax.swing.JMenuItem opcionClientes;
     private javax.swing.JMenuItem pasteMenuItem;
     private javax.swing.JMenuItem saveAsMenuItem;
-    private javax.swing.JMenuItem saveMenuItem;
     // End of variables declaration//GEN-END:variables
 
 }

@@ -161,10 +161,7 @@ public class FrmAbogados extends javax.swing.JInternalFrame {
             
             Abogados abogado = new Abogados(nroMatricula, nombre, apellido, telefono);
             abogado.AltaAbogado();
-            
-            
-            
-            
+            Limpiar();
         }
     }//GEN-LAST:event_btnGuardarActionPerformed
 	
@@ -173,6 +170,12 @@ public class FrmAbogados extends javax.swing.JInternalFrame {
         this.dispose();
     }//GEN-LAST:event_btnSalirActionPerformed
 
+        private void Limpiar(){
+            this.txtMatricula.setText("");
+            this.txtNombre.setText("");
+            this.txtApellido.setText("");
+            this.txtTelefono.setText("");
+        }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnGuardar;
